@@ -4,6 +4,11 @@
     "description": "Snippets for Tampermonkey API",
     "version": "0.0.1",
     "publisher": "darxeal",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Darxeal/tampermonkey-snippets"
+    },
+    "icon": "icon.png",
     "engines": {
         "vscode": "^1.42.0"
     },
