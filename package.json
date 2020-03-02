@@ -3,6 +3,7 @@
     "displayName": "Tampermonkey Snippets",
     "description": "Snippets for Tampermonkey API",
     "version": "0.0.1",
+    "publisher": "darxeal",
     "engines": {
         "vscode": "^1.42.0"
     },
