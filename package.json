@@ -2,7 +2,7 @@
     "name": "tampermonkey-snippets",
     "displayName": "Tampermonkey Snippets",
     "description": "Snippets for Tampermonkey API",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "publisher": "darxeal",
     "repository": {
         "type": "git",
