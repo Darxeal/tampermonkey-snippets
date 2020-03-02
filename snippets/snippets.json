@@ -1,1 +1,102 @@
-{}
+{
+    "GM_addStyle": {
+        "prefix": "GM_addStyle",
+        "description": "Adds the given style to the document and returns the injected style element.",
+        "body": ["GM_addStyle(${1:css})"]
+    },
+    "GM_deleteValue": {
+        "prefix": "GM_deleteValue",
+        "description": "Deletes 'name' from storage.",
+        "body": ["GM_deleteValue(${1:name})"]
+    },
+    "GM_listValues": {
+        "prefix": "GM_listValues",
+        "description": "List all names of the storage.",
+        "body": ["GM_listValues()"]
+    },
+    "GM_addValueChangeListener": {
+        "prefix": "GM_addValueChangeListener",
+        "description": "Adds a change listener to the storage and returns the listener ID. 'name' is the name of the observed variable. The 'remote' argument of the callback function shows whether this value was modified from the instance of another tab (true) or within this script instance (false). Therefore this functionality can be used by scripts of different browser tabs to communicate with each other.",
+        "body": ["GM_addValueChangeListener(${1:name}, function(name, old_value, new_value, remote) {", "\t$0", "})"]
+    },
+    "GM_removeValueChangeListener": {
+        "prefix": "GM_removeValueChangeListener",
+        "description": "Removes a change listener by its ID.",
+        "body": ["GM_removeValueChangeListener(${1:listener_id})"]
+    },
+    "GM_setValue": {
+        "prefix": "GM_setValue",
+        "description": "Set the value of 'name' to the storage.",
+        "body": ["GM_setValue(${1:name}, ${2:value})"]
+    },
+    "GM_getValue": {
+        "prefix": "GM_getValue",
+        "description": "Get the value of 'name' from storage.",
+        "body": ["GM_getValue(${1:name}, ${2:defaultValue})"]
+    },
+    "GM_log": {
+        "prefix": "GM_log",
+        "description": "Log a message to the console.",
+        "body": ["GM_log(${1:message})"]
+    },
+    "GM_getResourceText": {
+        "prefix": "GM_getResourceText",
+        "description": "Get the content of a predefined @resource tag at the script header.",
+        "body": ["GM_getResourceText(${1:name})"]
+    },
+    "GM_getResourceURL": {
+        "prefix": "GM_getResourceURL",
+        "description": "Get the base64 encoded URI of a predefined @resource tag at the script header.",
+        "body": ["GM_getResourceURL(${1:name})"]
+    },
+    "GM_registerMenuCommand": {
+        "prefix": "GM_registerMenuCommand",
+        "description": "Register a menu to be displayed at the Tampermonkey menu at pages where this script runs and returns a menu command ID.",
+        "body": ["GM_registerMenuCommand(${1:name}, ${2:fn}, ${3:accessKey})"]
+    },
+    "GM_unregisterMenuCommand": {
+        "prefix": "GM_unregisterMenuCommand",
+        "description": "Unregister a menu command that was previously registered by GM_registerMenuCommand with the given menu command ID.",
+        "body": ["GM_unregisterMenuCommand(${1:menuCmdId})"]
+    },
+    "GM_openInTab": {
+        "prefix": "GM_openInTab",
+        "description": "Open a new tab with this url. See https://www.tampermonkey.net/documentation.php#GM_openInTab",
+        "body": ["GM_openInTab(${1:url}, ${2:options})"]
+    },
+    "GM_xmlhttpRequest": {
+        "prefix": "GM_xmlhttpRequest",
+        "description": "Make an xmlHttpRequest. See https://www.tampermonkey.net/documentation.php#GM_xmlhttpRequest",
+        "body": ["GM_xmlhttpRequest(${1:details})"]
+    },
+    "GM_download": {
+        "prefix": "GM_download",
+        "description": "Downloads a given URL to the local disk. See https://www.tampermonkey.net/documentation.php#GM_download",
+        "body": ["GM_download(${1:details})"]
+    },
+    "GM_getTab": {
+        "prefix": "GM_getTab",
+        "description": "Get a object that is persistent as long as this tab is open.",
+        "body": ["GM_getTab(${1:callback})"]
+    },
+    "GM_saveTab": {
+        "prefix": "GM_saveTab",
+        "description": "Save the tab object to reopen it after a page unload.",
+        "body": ["GM_saveTab(${1:tab})"]
+    },
+    "GM_getTabs": {
+        "prefix": "GM_getTabs",
+        "description": "Get all tab objects as a hash to communicate with other script instances.",
+        "body": ["GM_getTabs(${1:callback})"]
+    },
+    "GM_notification": {
+        "prefix": "GM_notification",
+        "description": "Shows a HTML5 Desktop notification and/or highlight the current tab. See https://www.tampermonkey.net/documentation.php#GM_notification",
+        "body": ["GM_notification(${1:text}, ${2:title}, ${3:image}, ${4:onclick})"]
+    },
+    "GM_setClipboard": {
+        "prefix": "GM_setClipboard",
+        "description": "Get all tab objects as a hash to communicate with other script instances.",
+        "body": ["GM_setClipboard(${1:data}, ${2:info})"]
+    }
+}
