@@ -96,7 +96,7 @@
     },
     "GM_setClipboard": {
         "prefix": "GM_setClipboard",
-        "description": "Get all tab objects as a hash to communicate with other script instances.",
+        "description": "Copies data into the clipboard. The parameter 'info' can be an object like \"{ type: 'text', mimetype: 'text/plain'}\" or just a string expressing the type (\"text\" or \"html\").",
         "body": ["GM_setClipboard(${1:data}, ${2:info})"]
     }
 }
